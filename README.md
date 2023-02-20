@@ -1,6 +1,10 @@
 # Test-NodeJs-with-jest
 Some most common method use while Node.js with jest testing you must have to know
 
+### Some Tips
+    Add to package.json
+    Generate code coverage by adding the flag --coverage.
+    To continiously run test add the flag --watchAll
 
 ## Test string
 
