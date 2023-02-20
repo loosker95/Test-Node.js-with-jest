@@ -1,4 +1,4 @@
-# Test-NodeJs-with-jest
+# Unit Testing node js
 Some most common method use while Node.js with jest testing you must have to know
 
 ### Some Tips
@@ -7,21 +7,21 @@ Some most common method use while Node.js with jest testing you must have to kno
     To continiously run test add the flag --watchAll
 
 ## Test string
+    .toMatch()
 
 ## Test array
 #### matchers used
-
-.toBeDefined()
-.toBeNull()
-.toBe(value)
-.toContain(item)
-.toEqual()
-.expect.arrayContaining(array)
-
+    .toBeDefined()
+    .toBeNull()
+    .toBe(value)
+    .toContain(item)
+    .toEqual()
+    .expect.arrayContaining(array)
+#
     module.exports.getCurrency = ()=>{
         return ['EUR', USD, VND]
     }
-
+#
     describe('Test currency array with jest', ()=>{
       test('return if the array contain a specific cyrrency', ()=>{
           const result = getCurrency();
@@ -51,14 +51,14 @@ Some most common method use while Node.js with jest testing you must have to kno
 ## Test Object
 
 #### matchers used
-.toEqual()
-.toMatchObject()
-.toHaveProperty()
-
+    .toEqual()
+    .toMatchObject()
+    .toHaveProperty()
+#
     module.exports.getProduct = ()=>{
         return {"id": 1, "price": 200}
     }
-
+#
     describe('Test currency array with jest', ()=>{
       test('Should return a product with the given id', ()=>{
           const result = getProduct();
@@ -77,16 +77,15 @@ Some most common method use while Node.js with jest testing you must have to kno
 ## Test Exceptions
 
 #### matchers used
-.toThrow()
-.toMatchOject()
-.toBeGreaterThen()
-    
+    .toThrow()
+    .toMatchOject()
+    .toBeGreaterThen()
+#    
     module.exports.registerUser = (username)=>{
-        !(username) Throw new Error('Username is required.')
-        
+        !(username) Throw new Error('Username is required.')   
         return ({id: new Date().getTime(), username: username})
     }
-    
+#    
     describe('Test currency array with jest', ()=>{
       test('Should Throw an exception if the there is no user ', ()=>{
             const args = [Null, undefined, '', NaN, 0, false]
